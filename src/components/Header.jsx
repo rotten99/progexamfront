@@ -8,7 +8,11 @@ const Header = ({loggedIn,login,user,logout}) =>{
         <ul className="header">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/joke">Joke</NavLink></li>
+            {user.roles.includes('admin') && <li><NavLink to="/createAss">New Assistant</NavLink></li>}
+            {user.roles.includes('user') &&<li><NavLink to="/allAss">See Assistants</NavLink></li>}
+            {user.roles.includes('user') &&<li><NavLink to="/createBooking">New Booking</NavLink></li>}
+            {user.roles.includes('user') &&<li><NavLink to="/userBookings">See Bookings</NavLink></li>}
+            {user.roles.includes('admin') &&<li><NavLink to="/adminBookings">Handle Bookings</NavLink></li>}
             {!loggedIn ? (<LogIn login={login}/>) :
                 (<>
                     <LoggedIn user={user} logout={logout}/>

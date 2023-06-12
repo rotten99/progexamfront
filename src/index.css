@@ -10,9 +10,9 @@ ul.header {
   background-color: #333;
   width: 100%;
  }
- 
+
  ul.header li { float: left;}
- 
+
  ul.header li a {
   display: block;
   color: white;
@@ -22,7 +22,7 @@ ul.header {
  }
  ul.header li a:hover:not(.active) { background-color: #111;}
  .active { background-color: #62e4f8;}
-.loggedin { 
+.loggedin {
   color: whitesmoke;
   padding: 3px;
   text-align: center;
